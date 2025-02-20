@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+    <title>TODOList</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+        <section class="formBox">
+            <form>
+                <input class="task" type="text" placeholder="Digite a descrição da tarefa..." required>
+                <button type="submit" class="btnMain">+</button>
+            </form>
+        </section>
+        <section>
+            <ul class="list-task">
+                <li>
+                    <input class="check" type="checkbox" id=""/>
+                    <span> Passear com o gato </span>
+                    <button class="btnEmoji">✏️</button>
+                    <button class="btnEmoji">🗑️</button>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <div class="progress">
+                <div></div>
+                <span>0% Concluído</span>
+            </div>
+            <button class="btnMain"> Ocultar concluídas </button>
+        </footer>
+    </main>
+    
+</body>
+</html>
+
+<script src="script.js"></script>
