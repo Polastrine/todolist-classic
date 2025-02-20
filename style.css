@@ -99,22 +99,44 @@ footer{
     background-color: #d3d3d3;
     padding: 5px;
     border-radius: 5px;
+    height: 20px;
     width: 400px;
+    position: relative;
+}
+
+.progress div {
+    height: 100%;
+    background-color: green;
+    border-radius: 5px;
+    transition: width 0.5s;
+}
+
+.progress span {
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    transform: translateX(-50%);
+    font-weight: bold;
 }
 
 .list-task{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    padding: 10px 2px;
     border: 1px solid rgb(214, 214, 214);
-    border-radius: 10px;
+    height: 40vh;
+    max-height: 40vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     li{
         display: flex;
         flex-direction: row;
         width: 100%;
         gap: 80px;
+        border: 1px solid rgb(214, 214, 214);
+
+
 
         .check{
             cursor: pointer;
@@ -136,5 +158,11 @@ footer{
         }
     }
 
+    .no-task{
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
 
 }

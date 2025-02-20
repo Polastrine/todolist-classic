@@ -20,22 +20,19 @@
         <section class="formBox">
             <form>
                 <input class="task" type="text" placeholder="Digite a descrição da tarefa..." required>
-                <button type="submit" class="btnMain">+</button>
+                <button type="submit" class="btnMain" onclick="inserirTarefa()">+</button>
             </form>
         </section>
         <section>
             <ul class="list-task">
-                <li>
-                    <input class="check" type="checkbox" id=""/>
-                    <span> Passear com o gato </span>
-                    <button class="btnEmoji">✏️</button>
-                    <button class="btnEmoji">🗑️</button>
+                <li class="no-task">
+                    <p>Sem tarefas <a style="font-size: 20px;">😴</a></p>
                 </li>
             </ul>
         </section>
         <footer>
             <div class="progress">
-                <div></div>
+                <div style="width: 0%; height: 100%;"></div>
                 <span>0% Concluído</span>
             </div>
             <button class="btnMain"> Ocultar concluídas </button>
@@ -45,4 +42,5 @@
 </body>
 </html>
 
-<script src="script.js"></script>
+<script src="script.js">
+</script>
