@@ -18,24 +18,29 @@
             <h1>Lista de Tarefas</h1>
         </header>
         <section class="formBox">
-            <form>
-                <input class="task" type="text" placeholder="Digite a descrição da tarefa..." required>
-                <button type="submit" class="btnMain" onclick="inserirTarefa()">+</button>
+            <form id="task-form">
+                <input 
+                id="task-input" 
+                class="task" 
+                type="text" 
+                placeholder="Digite a descrição da tarefa..." 
+                required>
+                <button type="submit" class="btnMain" onclick="insertTask()">+</button>
             </form>
         </section>
         <section>
-            <ul class="list-task">
+            <ul id="task-list" class="list-task">
                 <li class="no-task">
                     <p>Sem tarefas <a style="font-size: 20px;">😴</a></p>
                 </li>
             </ul>
         </section>
         <footer>
-            <div class="progress">
+            <div id="progress-div" class="progress">
                 <div style="width: 0%; height: 100%;"></div>
-                <span>0% Concluído</span>
+                <span id="progress-text" >0% Concluído</span>
             </div>
-            <button class="btnMain"> Ocultar concluídas </button>
+            <button class="btnMain" onclick="hideCheckedTasks()"> Ocultar concluídas </button>
         </footer>
     </main>
     
