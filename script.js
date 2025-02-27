@@ -83,12 +83,16 @@ function hideCheckedTasks() {
 // Função responsável por deletar uma tarefa ao clicar no ícone de lixeira
 function deleteTask(event) {
     const taskItem = event.target.closest('li');
-    taskItem.remove();
-    saveTasks();
-    if (taskList.children.length === 1) {
-        noTask.style.display = "flex";
+    const confirmation = confirm('Você realmente deseja excluir esta tarefa?');
+    
+    if (confirmation) {
+        taskItem.remove();
+        saveTasks();
+        if (taskList.children.length === 1) {
+            noTask.style.display = "flex";
+        }
+        changeProgress();
     }
-    changeProgress();
 }
 
 // Função responsável por editar uma tarefa ao clicar no ícone de lápis
